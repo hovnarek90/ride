@@ -1,18 +1,26 @@
 import { Routes, Route, Link } from "react-router-dom";
-import Layout from "./components/layout/Layout";
-import Home from "./components/home/Home";
+import Home from "./pages/home/Home";
 import "./App.css";
+import Footer from "./components/footer/footer";
+import Header from "./components/header/header";
+import { useState } from "react";
 export default function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div>
+    <div
+      onClick={() => {
+        if (isOpen) setIsOpen(false);
+      }}
+    >
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="*" element={<NoMatch />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="*" element={<NoMatch />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

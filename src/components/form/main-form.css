@@ -1,18 +1,3 @@
-.home-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 812px;
-  z-index: -1;
-  flex-shrink: 0;
-}
-
-form {
-  display: flex;
-  text-align: center;
-}
 .input-container {
   display: flex;
   align-items: center;
@@ -26,6 +11,7 @@ form {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  text-align: center;
 }
 
 input {
@@ -38,6 +24,9 @@ input {
   border-radius: 4px;
 }
 input::placeholder {
+  padding: 0 30px;
+}
+input:focus {
   padding: 0 30px;
 }
 button {
@@ -54,7 +43,6 @@ button {
 }
 .home-container span svg {
   position: absolute;
-
   top: -7px;
   left: 18px;
   color: var(--blue);
