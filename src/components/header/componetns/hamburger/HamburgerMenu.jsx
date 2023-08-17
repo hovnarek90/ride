@@ -12,9 +12,6 @@ function HamburgerMenu({ isOpen, setIsOpen }) {
           setIsOpen(!isOpen);
         }}
       >
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
       </div>
       <div className="menu-items">
         <nav>
