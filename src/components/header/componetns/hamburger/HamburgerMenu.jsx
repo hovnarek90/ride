@@ -8,7 +8,6 @@ function HamburgerMenu({ isOpen, setIsOpen }) {
       <div
         className="hamburger-icon"
         onClick={() => {
-          // console.log(isOpen);
           setIsOpen(!isOpen);
         }}
       >
