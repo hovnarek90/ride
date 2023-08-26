@@ -25,7 +25,7 @@ const Registration = () => {
                         />
                     </div>
                     <div className="inputLine">
-                        <label>Phone</label>
+                        <label htmlFor="phone">Phone</label>
                         <input
                          type="tel" 
                          id="phone" 
