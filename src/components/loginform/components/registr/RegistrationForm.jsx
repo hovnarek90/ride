@@ -1,15 +1,16 @@
 import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import "./registration-form.css";
+import Button from "../../../buttons/registrationButtons/RegistrButton";
 
 const Registration = () => { 
-
     return (
         <>
             <div className="container">
-                <h2>Register</h2>
+                <h2 className="contentName">Register</h2>
                 <div className="registr-list">
                     <div className="inputLine">
-                        <label>Full name</label>
+                        <label htmlFor="fullname">Full name</label>
                         <input
                          type="text" 
                          id="fullname" 
@@ -17,7 +18,7 @@ const Registration = () => {
                         />
                     </div>
                     <div className="inputLine">
-                        <label>Password</label>
+                        <label htmlFor="password">Password</label>
                         <input
                          type="password" 
                          id="password" 
@@ -29,16 +30,31 @@ const Registration = () => {
                         <input
                          type="tel" 
                          id="phone" 
-                         placeholder="+374 XX XX XX" 
+                         placeholder="+374 xx xx xx" 
                         />
                     </div>
-                    <div className="inputButton">
-                        <input type="submit" value="Register"/>
+                    <Button
+                        text="Register"
+                        className="inputButton"
+                    />
+                    <div className="hrwithtext">
+                        <hr />
+                        <p className="textinsidehr">Or continue with</p>
                     </div>
+                    <Button
+                        text="Google"
+                        className="googleButton"
+                    />
+                    <Button
+                        text="Facebook"
+                        className="fbButton"
+                    />
                 </div>
+                <p className="finishLine">
+                    Already have an account? <Link to="/login">Login</Link>
+                </p>
             </div>
         </>
-        
     );
 }
 
