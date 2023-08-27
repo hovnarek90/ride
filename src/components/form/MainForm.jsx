@@ -4,6 +4,7 @@ import {
   faFlag,
   faLocationDot,
   faRepeat,
+  faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import "./main-form.css";
 
@@ -27,6 +28,12 @@ export default function MainForm() {
             <FontAwesomeIcon icon={faFlag} />
           </span>
           <input type="text" placeholder="To" />
+        </div>
+        <div className="data">
+          <input type="date" name="" id="" />
+          <div className="passengers">
+            <FontAwesomeIcon icon={faUserGroup} />
+          </div>
         </div>
       </form>
     </>
