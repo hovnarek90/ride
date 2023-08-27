@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./hamburgerMenu.css";
 
-function HamburgerMenu({ isOpen, setIsOpen }) {
+function HamburgerMenu({}) {
+  const [ isOpen, setIsOpen ] = useState(false)
   return (
     <div className={`hamburger-menu ${isOpen ? "open" : ""}`}>
       <div
