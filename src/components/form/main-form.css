@@ -23,7 +23,9 @@ form {
   padding: 8px;
   border-radius: 0 4px 4px 0;
 }
-
+input::placeholder {
+  padding: 0 30px;
+}
 input:focus {
   padding-right: 30px;
 }
@@ -39,17 +41,14 @@ input:focus {
 .home-container span {
   position: relative;
 }
-.home-container span {
-  height: 46px;
-  width: 26px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 4px 0 0 4px;
-}
 .home-container span svg {
+
   position: absolute;
   top: 15px;
   left: 6px;
   color: var(--blue);
+
+
 }
 form .data {
   width: 100%;

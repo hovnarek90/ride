@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./hamburgerMenu.css";
 
-function HamburgerMenu({}) {
-  const [isOpen, setIsOpen] = useState(false);
+function HamburgerMenu({ isOpen, setIsOpen }) {
   return (
     <div className={`hamburger-menu ${isOpen ? "open" : ""}`}>
       <div
