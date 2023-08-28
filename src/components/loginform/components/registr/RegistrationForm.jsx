@@ -1,5 +1,4 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
 import "./registration-form.css";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 
@@ -51,7 +50,7 @@ const Registration = () => {
                     />
                 </div>
                 <p className="finishLine">
-                    Already have an account? <Link to="/login">Login</Link>
+                    Already have an account? <a href="http://localhost:5173/login">Login</a>
                 </p>
             </div>
         </>
