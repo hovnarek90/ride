@@ -4,6 +4,7 @@ import "./App.css";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Registration from "./components/loginform/components/registr/RegistrationForm";
+import Login from "./components/loginform/components/login/LoginForm";
 import { useState } from "react";
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="reg" element={<Registration />} />
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
       <Footer />
