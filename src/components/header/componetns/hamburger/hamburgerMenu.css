@@ -3,6 +3,7 @@
   top: 20px;
   right: 20px;
   z-index: 1000;
+  color: #000000;
 }
 nav {
   text-decoration: none;
@@ -26,11 +27,17 @@ nav {
 .menu-items {
   display: none;
   position: absolute;
+  height: 250px;
+
   top: 60px;
-  right: 0;
+  right: 0%;
   background-color: #fff;
   border-radius: 4px;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.menu-items nav {
+  width: 100%;
 }
 
 .menu-items a {
@@ -40,10 +47,6 @@ nav {
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
   text-decoration: none;
-}
-
-.hamburger-menu.open .bar {
-  /* background-color: #fff; */
 }
 
 .hamburger-menu.open .menu-items {

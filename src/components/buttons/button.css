@@ -1,0 +1,28 @@
+/* Reset some default button styles */
+.btn {
+  width: 164px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 8px;
+}
+
+.btn.blue {
+  background-color: var(--blue);
+  color: #ffffff;
+}
+.btn.blue:hover {
+  background-color: rgba(78, 137, 230, 1);
+}
+
+.btn.green {
+  background-color: var(--green);
+  color: #ffffff;
+}
+
+.btn.green:hover {
+  background-color: rgba(85, 209, 191, 1);
+}

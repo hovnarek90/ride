@@ -6,6 +6,7 @@ import {
   faRepeat,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import Button from "../buttons/Button";
 import "./main-form.css";
 
 export default function MainForm() {
@@ -18,7 +19,7 @@ export default function MainForm() {
           </span>
           <input type="text" placeholder="From" />
         </div>
-        <div className="button">
+        <div className="button-repeat">
           <button type="submit">
             <FontAwesomeIcon icon={faRepeat} />
           </button>
@@ -30,10 +31,21 @@ export default function MainForm() {
           <input type="text" placeholder="To" />
         </div>
         <div className="data">
-          <input type="date" name="" id="" />
-          <div className="passengers">
-            <FontAwesomeIcon icon={faUserGroup} />
+          <div className="input-data">
+            <input type="date" name="" id="" />
           </div>
+          <div className="passengers">
+            {" "}
+            <FontAwesomeIcon icon={faUserGroup} />
+            Passenger
+            <div className="list-passenger">
+              
+            </div>
+          </div>
+        </div>
+        <div className="offer-buttons">
+          <Button type="green"> Offer a ride</Button>
+          <Button type="blue"> Finde a ride</Button>
         </div>
       </form>
     </>
