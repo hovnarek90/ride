@@ -42,13 +42,10 @@ input:focus {
   position: relative;
 }
 .home-container span svg {
-
   position: absolute;
-  top: 15px;
-  left: 6px;
+  top: -8px;
+  left: 12px;
   color: var(--blue);
-
-
 }
 form .data {
   width: 100%;
