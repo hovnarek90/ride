@@ -24,7 +24,7 @@ label {
     padding-bottom: 8px;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 390px) {
     html, body {
         overflow-x: hidden;
     }
