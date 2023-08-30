@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     width: 100%;
     display: flex;
@@ -28,19 +33,10 @@ label {
     html, body {
         overflow-x: hidden;
     }
-    body {
-        position: relative
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
 
     .container {
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        padding: 0 16px;
         font-family: "SF Pro";
     }
     
@@ -48,6 +44,14 @@ label {
         font-family: "SF Pro";
         src: local("SF Pro"),
         url(../../../../fonts/SF-Pro-Text-Regular.otf) format("truetype");
+    }
+
+    .general {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .contentName {
@@ -173,7 +177,7 @@ label {
         line-height: 24px;
     }
 
-    a {
+    .logining {
         color: #226CE0;
         font-family: SF Pro;
         font-size: 16px;
