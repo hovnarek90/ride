@@ -4,8 +4,8 @@ import Button from "../../../buttons/registrationButtons/RegistrButton";
 
 const Registration = () => { 
     return (
-        <>
-            <div className="container">
+        <section className="container">
+            <div className="general">
                 <h2 className="contentName">Register</h2>
                 <div className="registr-list">
                     <div className="inputLine">
@@ -50,10 +50,10 @@ const Registration = () => {
                     />
                 </div>
                 <p className="finishLine">
-                    Already have an account? <a href="http://localhost:5173/login">Login</a>
+                    Already have an account? <a className="logining" href="http://localhost:5173/login">Login</a>
                 </p>
             </div>
-        </>
+        </section>
     );
 }
 

@@ -5,7 +5,7 @@ import "./header.css";
 
 export default function Header({ isOpen, setIsOpen }) {
   return (
-    <div>
+    <header>
       <div className="heder">
         <div className="logo">
           <Link to="/">Logo</Link>
@@ -14,6 +14,7 @@ export default function Header({ isOpen, setIsOpen }) {
           <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
-    </div>
+    </header>
+     
   );
 }
