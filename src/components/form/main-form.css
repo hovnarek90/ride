@@ -23,10 +23,10 @@ form {
   padding: 8px;
   border-radius: 0 4px 4px 0;
 }
-input::placeholder {
+.input-container input::placeholder {
   padding: 0 30px;
 }
-input:focus {
+.input-container  input:focus {
   padding-right: 30px;
 }
 .button-repeat button {
