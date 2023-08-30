@@ -1,5 +1,31 @@
-.why-us {
-  margin-top: 28rem ;
+.container .why-us {
+  margin-top: 30rem;
   width: 100%;
   overflow: hidden;
+}
+.container .why-us h3 {
+  margin-bottom: 32px;
+  color: #1b2530;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.container .why-us h2 {
+  color: #1b2530;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 16px 0;
+}
+.container .why-us p {
+  color: #1b2530;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }

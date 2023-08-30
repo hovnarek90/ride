@@ -1,13 +1,9 @@
 header {
+  margin: 1rem 0;
+}
+header .container .content {
   display: flex;
-  justify-content: space-between;
-  margin: 2rem 0;
 }
 
 @media (max-width: 390px) {
-  .heder {
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
-  }
 }

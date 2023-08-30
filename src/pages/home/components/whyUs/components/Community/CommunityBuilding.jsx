@@ -5,10 +5,10 @@ import "./community-building.css";
 export default function CommunityBuilding() {
   return (
     <div className="community-building">
-      {" "}
       <div className="icon">
         <FontAwesomeIcon icon={faComments} />{" "}
       </div>
+
       <h2>Community Building</h2>
       <p>
         We foster a sense of community among its users. It provides user

@@ -6,7 +6,7 @@ import WhyUs from "./components/whyUs/WhyUs";
 
 export default function Home() {
   return (
-    <>
+    <div className="container">
       <div className="home-container">
         <img src="src/images/second.png" alt="" className="home-background" />
 
@@ -15,6 +15,6 @@ export default function Home() {
       <section className="why-us-section">
         <WhyUs />
       </section>
-    </>
+    </div>
   );
 }
