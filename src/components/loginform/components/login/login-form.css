@@ -1,25 +1,17 @@
-/* @media (max-width: 390px) {
-    html, body {
-        overflow-x: hidden;
-    }
-    body {
-        position: relative
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        width: 100%;
-        font-family: "SF Pro";
-    }
-    
+@media (max-width: 390px) {
     @font-face {
         font-family: "SF Pro";
         src: local("SF Pro"),
         url(../../../../fonts/SF-Pro-Text-Regular.otf) format("truetype");
+    }
+
+    .general {
+        width: 90%;
+        font-family: "SF Pro";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .contentName {
@@ -39,7 +31,6 @@
     }
     
     .login-list .inputLine  input {
-        width: 95%;
         height: 28px;
         border-radius: 8px;
         padding: 10px;
@@ -155,4 +146,4 @@
         line-height: 24px;
         text-decoration: none;
     }
-} */
+}

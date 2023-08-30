@@ -15,6 +15,5 @@ export default function Header({ isOpen, setIsOpen }) {
         </div>
       </div>
     </header>
-     
   );
 }
