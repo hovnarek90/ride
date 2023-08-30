@@ -4,7 +4,7 @@ import Button from "../../../buttons/registrationButtons/RegistrButton";
 
 const Registration = () => { 
     return (
-        <section className="container">
+        <div className="container">
             <div className="general">
                 <h2 className="contentName">Register</h2>
                 <div className="registr-list">
@@ -53,7 +53,7 @@ const Registration = () => {
                     Already have an account? <a className="logining" href="http://localhost:5173/login">Login</a>
                 </p>
             </div>
-        </section>
+        </div>
     );
 }
 
