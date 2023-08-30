@@ -6,14 +6,15 @@ import "./header.css";
 export default function Header({ isOpen, setIsOpen }) {
   return (
     <div>
-      <div className="heder">
+      <header>
+        
         <div className="logo">
           <Link to="/">Logo</Link>
         </div>
         <div className="hamburger">
           <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
-      </div>
+      </header>
     </div>
   );
 }
