@@ -1,0 +1,20 @@
+.accordion .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 0;
+}
+
+.accordion .accordion-header span .open {
+  transform: rotate(45deg);
+}
+.accordion .accordion-header span .close {
+  transform: rotate(-45deg);
+}
+.accordion .accordion-header h4 {
+  color: #1b2530;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}

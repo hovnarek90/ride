@@ -15,6 +15,7 @@ function HamburgerMenu({ isOpen, setIsOpen }) {
       >
         <FontAwesomeIcon icon={faBars} />
       </div>
+
       <div className="menu-items">
         <nav>
           <ul>

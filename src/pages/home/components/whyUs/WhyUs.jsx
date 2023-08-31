@@ -6,13 +6,15 @@ import CommunityBuilding from "./components/Community/CommunityBuilding";
 
 export default function WhyUs() {
   return (
-    <div className="container">
-      <div className="why-us">
-        <h3>Why Us?</h3>
-        <SafetyAndSecurity />
-        <CompetitivePricing />
-        <CommunityBuilding />
+    <section className="why-us-section">
+      <div className="container">
+        <div className="why-us">
+          <h3>Why Us?</h3>
+          <SafetyAndSecurity />
+          <CompetitivePricing />
+          <CommunityBuilding />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

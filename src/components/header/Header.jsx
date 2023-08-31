@@ -6,6 +6,7 @@ export default function Header({ isOpen, setIsOpen }) {
   return (
     <header>
       <div className="container">
+
         <div className="content">
           <div className="logo">
             <Link to="/">Logo</Link>

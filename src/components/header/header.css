@@ -1,9 +1,18 @@
 header {
-  margin: 1rem 0;
+  background-image: url("../../images/second.png");
+  background-position: center;
+  object-fit: cover;
+  height: 812px;
+}
+header .container {
+  background-color: transparent;
 }
 header .container .content {
   display: flex;
+  padding: 1rem 0;
 }
-
+header .container .content .hamburger {
+  width: 100%;
+}
 @media (max-width: 390px) {
 }

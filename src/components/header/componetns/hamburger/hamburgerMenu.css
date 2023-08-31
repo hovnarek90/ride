@@ -3,8 +3,11 @@
   right: 10px;
   z-index: 1000;
   color: #000000;
+  width: 100%;
 }
 .hamburger-icon {
+  position: relative;
+  left: 45%;
   padding: 10px 0;
   cursor: pointer;
   display: flex;
@@ -14,9 +17,11 @@
 
 .menu-items {
   display: none;
-  position: absolute;
+  position: relative;
+  width: 95%;
   height: auto;
-  right: 10%;
+  left: 5%;
+  text-align: center;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
