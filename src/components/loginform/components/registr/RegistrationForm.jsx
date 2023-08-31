@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./registration-form.css";
-import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 
 const Registration = () => { 
-    const [ password, setPassword ] = useState("");
-    const [ visible, setVisible ] = useState(false);
-
     return (
         <div className="container">
             <div className="general">
@@ -23,15 +19,10 @@ const Registration = () => {
                     <div className="inputLine">
                         <label htmlFor="password">Password</label>
                         <input
-                         value={password}
-                         type={visible ? "text" : "password"} 
-                         onChange={(e) => setPassword(e.target.value)}
+                         type="password" 
                          id="password" 
                          placeholder="Enter your password" 
                         />
-                        <div className="passIcon" onClick={() => setVisible(!visible)}>
-                            {visible ? <EyeOutlined /> : <EyeInvisibleOutlined />}
-                        </div>
                     </div>
                     <div className="inputLine">
                         <label htmlFor="phone">Phone</label>
