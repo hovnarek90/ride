@@ -42,24 +42,15 @@ label {
         display: flex;
         flex-direction: column;
     }
-
+    
     .inputLine {
         display: flex;
         flex-direction: column;
         padding-top: 16px;
-        position: relative;
     }
-
-    .passIcon {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        left: 92%;
-        top: 64%;
-    }
-
+    
     .registr-list .inputLine  input {
-        height: 48px;
+        height: 28px;
         border-radius: 8px;
         padding: 10px;
         border: 1px solid var(--text-color-200, #D4DDE7);

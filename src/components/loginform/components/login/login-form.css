@@ -19,7 +19,7 @@
     }
     
     .login-list {
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-direction: column;
     }
@@ -31,7 +31,7 @@
     }
     
     .login-list .inputLine  input {
-        height: 48px;
+        height: 28px;
         border-radius: 8px;
         padding: 10px;
         border: 1px solid var(--text-color-200, #D4DDE7);
