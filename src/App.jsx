@@ -1,7 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/home/Home";
 import "./App.css";
-import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Registration from "./components/loginform/components/registr/RegistrationForm";
 import Login from "./components/loginform/components/login/LoginForm";
@@ -27,7 +26,6 @@ export default function App() {
         <Route path="login" element={<Login />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
