@@ -4,7 +4,6 @@ import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 
 const Login = () => {
-    const [ password, setPassword ] = useState("");
     const [ visible, setVisible ] = useState(false);
 
     return (
@@ -24,13 +23,11 @@ const Login = () => {
                         <div className="inputLine">
                             <label htmlFor="password">Password</label>
                             <input
-                             value={password}
                              type={visible ? "text" : "password"} 
-                             onChange={(e) => setPassword(e.target.value)}
                              id="password" 
                              placeholder="Enter your password" 
                             />
-                            <div className="loginIcon" onClick={() => setVisible(!visible)}>
+                            <div className="loginIcon" onClick={() => setVisible(!visible)} onChange={(e) => setPassword(e.target.value)}>
                                 {visible ? <EyeOutlined /> : <EyeInvisibleOutlined />}
                             </div>
                             <a className="forgotPass" href="http://localhost:5173/reg">Forgot password?</a>
