@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./accordion.css";
 
-const Accordion = ({ title, content }) => {
+const Accordion = ({ title,  content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {

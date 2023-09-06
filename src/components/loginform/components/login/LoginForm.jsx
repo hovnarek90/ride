@@ -30,9 +30,10 @@ const Login = () => {
                              id="password" 
                              placeholder="Enter your password" 
                             />
-                            <div className="passIcon" onClick={() => setVisible(!visible)}>
+                            <div className="loginIcon" onClick={() => setVisible(!visible)}>
                                 {visible ? <EyeOutlined /> : <EyeInvisibleOutlined />}
                             </div>
+                            <a className="forgotPass" href="http://localhost:5173/reg">Forgot password?</a>
                         </div>
                         <Button
                             text="Login"

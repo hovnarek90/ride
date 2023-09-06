@@ -25,7 +25,7 @@ label {
     }
 
     .general {
-        width: 90%;
+        width: 100%;
         font-family: "SF Pro";
         display: flex;
         flex-direction: column;
@@ -64,6 +64,7 @@ label {
         padding: 10px;
         border: 1px solid var(--text-color-200, #D4DDE7);
         background: #FFF;
+        text-transform: none;
     }
     
     .registr-list .inputLine label {
