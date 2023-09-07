@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "../buttons/Button";
 import "./main-form.css";
+import DataButton from "./dattButton/dataButton";
 
 export default function MainForm() {
   return (
@@ -30,17 +31,19 @@ export default function MainForm() {
           </span>
           <input type="text" placeholder="To" />
         </div>
+
         <div className="data">
-          <div className="input-data">
+          {/* <div className="input-data">
             <input type="date" name="" id="" />
-          </div>
+          </div> */}
+
+          <DataButton />
+
           <div className="passengers">
             {" "}
             <FontAwesomeIcon icon={faUserGroup} />
             Passenger
-            <div className="list-passenger">
-              
-            </div>
+            <div className="list-passenger"></div>
           </div>
         </div>
         <div className="offer-buttons">

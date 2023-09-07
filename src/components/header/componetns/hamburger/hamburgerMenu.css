@@ -1,7 +1,7 @@
 .hamburger-menu {
   position: absolute;
   right: 10px;
-  z-index: 1000;
+  z-index: 1;
   color: #000000;
   width: 100%;
 }

@@ -1,0 +1,49 @@
+.custom-date-input {
+  position: relative;
+  width: 50%;
+}
+
+.custom-date-input span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the content */
+}
+
+#myDateInput {
+  /* Hide the original date input */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer; /* Make the input clickable */
+}
+
+.custom-date-text {
+  position: relative;
+  z-index: 2;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+}
+
+.custom-date-text::before {
+  content: "\1F4C5";
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+/* Style when the input is checked (you can uncomment this if needed) */
+#myDateInput:checked + .custom-date-text {
+  background-color: lightblue;
+  color: #fff;
+}
