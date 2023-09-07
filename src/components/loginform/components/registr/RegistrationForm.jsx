@@ -24,31 +24,54 @@ const Registration = () => {
               />
 =======
     const [ visible, setVisible ] = useState(false);
-    // const [errors, setErrors] = useState({});
-    // const [state, setState] = useState({
-    //     fullName: "",
-    //     password: "",
-    //     phone: ""
-    // });
+    const [errors, setErrors] = useState({});
+    const [data, setData] = useState({
+        fullName: "",
+        password: "",
+        phone: ""
+    });
 
-    // const validation = () => {
-    //     let errors = {};
-    //     const nameRegex = /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
-    //     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    //     // const phoneRegex = ;
-    // }
+    const handleClick = (e) => {
+        console.log(data);
+        e.preventDefault();
+        if (validation()) {
+        console.log("Form submitted:", data);
+        }
+        setData({
+            fullName: "",
+            password: "",
+            phone: ""
+        });
+        console.log(data);
+    };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     if (validation()) {
-    //       console.log("Form submitted:", state);
-    //     }
-    //     setState({
-    //       fullName: "",
-    //       password: "",
-    //       phone: "",
-    //     });
-    // };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setData({ ...data, [name]: value });
+    };
+
+    const validation = () => {
+        let errors = {};
+        
+        const nameRegex = /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
+        const passwordRegex = /^([A-Za-z0-9]\W){8,}$/;
+        const phoneRegex = /^(\+374|374|0)(10|20|30|40|43|55|77|91|93|94|95|96|98|99)(\d{6}|\d{7})$/;
+
+        if (!data.fullName.match(nameRegex)) {
+            errors.fullName = "Error Name";
+        }
+
+        if (!data.password.match(passwordRegex)) {
+            errors.password = "Error Password";
+        }
+
+        if (!data.phone.match(phoneRegex)) {
+            errors.phone = "Error Phone";
+        }
+
+        setErrors(errors);
+        return Object.keys(errors).length === 0;
+    }
 
     return (
         <div className="container">
@@ -56,34 +79,50 @@ const Registration = () => {
                 <h2 className="contentName">Register</h2>
                 <div className="registr-list">
                     <div className="inputLine">
-                        <label htmlFor="fullname">Full name</label>
+                        <label htmlFor="fullName">Full name</label>
                         <input
                          type="text" 
-                         id="fullname" 
-                         placeholder="Enter your full name" 
+                         id="fullName"
+                         name="fullName"
+                         placeholder="Enter your full name"
+                         value={data.fullName}
+                         onChange={handleChange} 
                         />
+                        <br />
+                        <div style={{ color: "red" }}> {errors.fullName}</div>
                     </div>
                     <div className="inputLine">
                         <label htmlFor="password">Password</label>
                         <input
                          type={visible ? "text" : "password"} 
                          id="password" 
+                         name="password"
                          placeholder="Enter your password" 
+                         value={data.password}
+                         onChange={handleChange}
                         />
                         <div className="passIcon" onClick={() => setVisible(!visible)} onChange={(e) => setPassword(e.target.value)}>
                             {visible ? <EyeOutlined /> : <EyeInvisibleOutlined />}
                         </div>
+                        <br />
+                        <div style={{ color: "red" }}> {errors.password}</div>
                     </div>
                     <div className="inputLine">
                         <label htmlFor="phone">Phone</label>
                         <input
-                         type="tel" 
+                         type="text" 
                          id="phone" 
-                         placeholder="+374 xx xx xx" 
+                         name="phone"
+                         placeholder="+374 xx xx xx"
+                         value={data.phone}
+                         onChange={handleChange}
                         />
+                        <br />
+                        <div style={{ color: "red" }}> {errors.phone}</div>
                     </div>
                     <Button
                         text="Register"
+                        onClick={handleClick}
                         className="inputButton"
                     />
                     <div className="hrwithtext">
