@@ -6,7 +6,7 @@
     }
 
     .general {
-        width: 90%;
+        width: 100%;
         font-family: "SF Pro";
         display: flex;
         flex-direction: column;
@@ -36,6 +36,7 @@
         padding: 10px;
         border: 1px solid var(--text-color-200, #D4DDE7);
         background: #FFF;
+        text-transform: none;
     }
     
     .login-list .inputLine label {
@@ -135,6 +136,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
+        text-transform: none;
     }
 
     a {
@@ -145,5 +147,25 @@
         font-weight: 590;
         line-height: 24px;
         text-decoration: none;
+    }
+
+    .loginIcon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 92%;
+        top: 48%;
+    }
+
+    .forgotPass {
+        color: #226CE0;
+        text-align: right;
+        font-family: "SF pro";
+        font-size: 14px;
+        font-style: normal;
+        padding-top: 8px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: none;
     }
 }
