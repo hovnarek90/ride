@@ -8,13 +8,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "../buttons/Button";
 import "./main-form.css";
-import DataButton from "./dattButton/dataButton";
+import DatePickerComponent from "./calendar/DatePickerComponent.jsx";
 
 export default function MainForm() {
   return (
     <>
       <form action="">
-        <div className="input-container">
+        <div className="input-container-form">
           <span className="icon">
             <FontAwesomeIcon icon={faLocationDot} />
           </span>
@@ -25,7 +25,7 @@ export default function MainForm() {
             <FontAwesomeIcon icon={faRepeat} />
           </button>
         </div>
-        <div className="input-container">
+        <div className="input-container-form">
           <span className="icon">
             <FontAwesomeIcon icon={faFlag} />
           </span>
@@ -36,8 +36,8 @@ export default function MainForm() {
           {/* <div className="input-data">
             <input type="date" name="" id="" />
           </div> */}
-
-          <DataButton />
+          {/* <DataButton /> */}
+          <DatePickerComponent />
 
           <div className="passengers">
             {" "}

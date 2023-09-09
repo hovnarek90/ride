@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./accordion.css";
 
-const Accordion = ({ title,  content }) => {
+const Accordion = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -22,7 +22,15 @@ const Accordion = ({ title,  content }) => {
           )}
         </span>
       </div>
-      {isOpen && <p className="accordion-content">{content}</p>}
+      {isOpen && (
+        <div className="accordion-content">
+          {Array.isArray(content) ? (
+            content.map((section, index) => <p key={index}>{section}</p>)
+          ) : (
+            <p>{content}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };

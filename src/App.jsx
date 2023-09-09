@@ -1,10 +1,12 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/home/Home";
+import Footer from "./components/footer/Footer";
 import "./App.css";
 import Header from "./components/header/header";
 import Registration from "./components/loginform/components/registr/RegistrationForm";
 import Login from "./components/loginform/components/login/LoginForm";
 import { useState } from "react";
+
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,7 +14,6 @@ export default function App() {
     <div
       onClick={() => {
         if (isOpen) {
-
           setIsOpen(false);
         }
       }}
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="login" element={<Login />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
