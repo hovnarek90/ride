@@ -27,3 +27,21 @@ footer .container .buttons-container {
   display: flex;
   justify-content: space-around;
 }
+
+footer .container .footer-description p {
+  color: #f8f8f8;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+footer .container .footer-description span {
+  color: #445261;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+}

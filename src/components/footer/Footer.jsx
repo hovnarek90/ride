@@ -50,6 +50,11 @@ export default function Footer() {
             width={"45%"}
           />
         </ButtonsContainer>
+        <div className="footer-description">
+          <p>Terms</p>
+          <p>Privacy Policy</p>
+          <span>Ⓒ 2023 Teiapp</span>
+        </div>
       </div>
     </footer>
   );
