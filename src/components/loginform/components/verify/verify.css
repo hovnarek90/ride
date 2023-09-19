@@ -1,0 +1,100 @@
+@media (max-width: 760px) {
+    .verifyContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px; 
+        padding-bottom: 16px;
+    }
+
+    .phonNum {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 16px;
+    }
+
+    .phonNum input {
+        width: 100px;
+        border: 1px solid black;
+    }
+
+    .phonNum p {
+        text-transform: none;
+        padding-bottom: 8px;
+    }
+
+    .verifyNums {
+        width: 75%;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 64px;
+    }
+
+    .verifyNums input {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        padding: 12px 0px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid #6E7D8E;
+        background: #FFF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 590;
+        line-height: 24px;
+    }
+
+    .verifyTimer {
+        width: 54%;
+        display: flex;
+        padding-top: 40px;
+    }
+
+    .verifyTimer p {
+        padding-right: 5px;
+        text-transform: none;
+    }
+
+    .verifyTimer .timerContent {
+        color: #7C8C9E;
+    }
+
+    .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 48px;
+    }
+
+    .verifyBackBtn {
+        width: 164px;
+        height: 48px;
+        color: #1B2530;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 590;
+        line-height: 24px;
+        border-radius: 8px;
+    }
+
+    .verifyBtn {
+        width: 164px;
+        height: 48px;
+        color: #1B2530;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 590;
+        line-height: 24px;
+    }
+
+    .verifyBtn {
+        background-color: #BDD3F6;
+        border-radius: 8px;
+    }
+}
+

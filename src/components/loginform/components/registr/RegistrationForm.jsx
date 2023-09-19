@@ -3,31 +3,21 @@ import "./registration-form.css";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 
-const Registration = () => {
+const Registration = ({data, handleChange}) => {
   const [visible, setVisible] = useState(false);
   const [errors, setErrors] = useState({});
-  const [data, setData] = useState({
-    fullName: "",
-    password: "",
-    phone: "",
-  });
 
   const handleClick = (e) => {
     e.preventDefault();
     if (validation()) {
-      console.log("Form submitted:", data);
+      window.location.href="http://localhost:5173/verify";
     }
-    setData({
-      fullName: "",
-      password: "",
-      phone: "",
-    });
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setData({ ...data, [name]: value });
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setData({ ...data, [name]: value });
+  // };
 
   const validation = () => {
     let errors = {};
