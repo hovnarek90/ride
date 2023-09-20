@@ -64,6 +64,10 @@
         color: #7C8C9E;
     }
 
+    .resendTimer {
+        text-decoration: underline;
+    }
+
     .buttons {
         width: 100%;
         display: flex;
@@ -93,8 +97,9 @@
     }
 
     .verifyBtn {
-        background-color: #BDD3F6;
+        background-color: #226CE0;
         border-radius: 8px;
+        color: #FFF;
     }
 }
 
