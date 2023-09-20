@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import "./registration-form.css";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
-
-import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
+import { useNavigate } from "react-router-dom";
 
 const Registration = ({ data, handleChange }) => {
   const [visible, setVisible] = useState(false);
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -17,19 +16,13 @@ const Registration = ({ data, handleChange }) => {
     }
   };
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setData({ ...data, [name]: value });
-  // };
-
   const validation = () => {
     let errors = {};
 
     const nameRegex =
       /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
     const passwordRegex = /^(?=.*\d)(?=.*\w)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    const phoneRegex =
-      /^(\+374|374|0)(10|20|30|40|43|55|77|91|93|94|95|96|98|99)(\d{6}|\d{7})$/;
+    const phoneRegex = /^(\+374|374|0)([1-9]\d{7})$/;
 
     if (!data.fullName.match(nameRegex)) {
       errors.fullName = "Error Name";
@@ -92,7 +85,7 @@ const Registration = ({ data, handleChange }) => {
               id="phone"
               name="phone"
               placeholder="+374 xx xx xx"
-              value={data.phone}
+              value={data.phone || "+374"}
               onChange={handleChange}
             />
             <br />

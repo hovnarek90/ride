@@ -1,22 +1,67 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 import "./verify.css";
-import { useLocation } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const Verification = ({ first, second }) => {
+const Verification = () => {
   const [counter, setCounter] = useState(60);
+  const [isTimerRunning, setIsTimerRunning] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
+  const [verifyNum, setVerifyNum] = useState({
+    num1: "",
+    num2: "",
+    num3: "",
+    num4: "",
+  });
+
+  const handleBack = () => {
+    navigate("/reg");
+  };
+
+  const handleVerifyChanges = (e) => {
+    const { name, value } = e.target;
+    setVerifyNum({ ...verifyNum, [name]: value });
+  };
+
+  const handleVerify = (e) => {
+    e.preventDefault();
+    if (verification()) {
+      navigate("/user");
+    }
+  };
+  const verification = () => {
+    if (
+      verifyNum.num1 == 2 &&
+      verifyNum.num2 == 2 &&
+      verifyNum.num3 == 2 &&
+      verifyNum.num4 == 2
+    ) {
+      return true;
+    }
+    return false;
+  };
+
+  const handleResendClick = () => {
+    if (!isTimerRunning) {
+      setCounter(60);
+      setIsTimerRunning(true);
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (counter > 0) {
-        setCounter(counter - 1);
+      if (isTimerRunning && counter > 0) {
+        setCounter((prevCounter) => prevCounter - 1);
       } else {
         clearInterval(interval);
+        setIsTimerRunning(false);
       }
     }, 1000);
+
     return () => clearInterval(interval);
-  }, [counter]);
+  }, [counter, isTimerRunning]);
 
   const minutes = Math.floor(counter / 60);
   const remainingSeconds = counter % 60;
@@ -30,26 +75,79 @@ const Verification = ({ first, second }) => {
           <h2>Verification</h2>
           <div className="phonNum">
             <p>Please enter the 4 digit code sent to</p>
-            <p>+374 {phoneNumber ? phoneNumber : ""}</p>
+            <p>
+              +374{" "}
+              {phoneNumber
+                ? `${phoneNumber.slice(4, 6)} ${phoneNumber.slice(6, 9)}`
+                : ""}{" "}
+              xxx
+            </p>
           </div>
           <div className="verifyNums">
-            <input type="text" maxLength={1} placeholder="0" />
-            <input type="text" maxLength={1} placeholder="0" />
-            <input type="text" maxLength={1} placeholder="0" />
-            <input type="text" maxLength={1} placeholder="0" />
+            <input
+              type="text"
+              id="num1"
+              name="num1"
+              value={verifyNum.num1}
+              onChange={handleVerifyChanges}
+              maxLength={1}
+              placeholder="0"
+            />
+            <input
+              type="text"
+              id="num2"
+              name="num2"
+              value={verifyNum.num2}
+              onChange={handleVerifyChanges}
+              maxLength={1}
+              placeholder="0"
+            />
+            <input
+              type="text"
+              id="num3"
+              name="num3"
+              value={verifyNum.num3}
+              onChange={handleVerifyChanges}
+              maxLength={1}
+              placeholder="0"
+            />
+            <input
+              type="text"
+              id="num4"
+              name="num4"
+              value={verifyNum.num4}
+              onChange={handleVerifyChanges}
+              maxLength={1}
+              placeholder="0"
+            />
           </div>
           <div className="verifyTimer">
             <p>Code send </p>
             <p className="timerContent">
-              resend in {`0${minutes}`}:
-              {remainingSeconds < 10
-                ? `0${remainingSeconds}`
-                : remainingSeconds}
+              {isTimerRunning ? (
+                `resend in 0${minutes}:${
+                  remainingSeconds < 10
+                    ? `0${remainingSeconds}`
+                    : remainingSeconds
+                }`
+              ) : (
+                <p className="resendTimer" onClick={handleResendClick}>
+                  Click to resend
+                </p>
+              )}
             </p>
           </div>
           <div className="buttons">
-            <Button text="Back" className="verifyBackBtn" />
-            <Button text="Verify" className="verifyBtn" />
+            <Button
+              text="Back"
+              className="verifyBackBtn"
+              onClick={handleBack}
+            />
+            <Button
+              text="Verify"
+              className="verifyBtn"
+              onClick={handleVerify}
+            />
           </div>
         </div>
       </div>
