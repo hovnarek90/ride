@@ -3,6 +3,7 @@ import "./registration-form.css";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 import { useNavigate } from "react-router-dom";
+import usersData from "./user.json";
 
 const Registration = ({ data, handleChange }) => {
   const [visible, setVisible] = useState(false);
@@ -12,7 +13,16 @@ const Registration = ({ data, handleChange }) => {
   const handleClick = (e) => {
     e.preventDefault();
     if (validation()) {
+      const newUser = {
+        id: usersData.users.length + 1,
+        fullName: data.fullName,
+        password: data.phone,
+        phone: data.phone,
+      };
+      console.log(usersData);
+      usersData.users.push(newUser);
       navigate("/verify", { state: { phoneNumber: data.phone } });
+      console.log(usersData);
     }
   };
 

@@ -13,6 +13,7 @@
 .btn.blue {
   background-color: var(--blue);
   color: #ffffff;
+  width: 100%;
 }
 .btn.blue:hover {
   background-color: rgba(78, 137, 230, 1);

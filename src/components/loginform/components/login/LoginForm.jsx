@@ -13,11 +13,11 @@ const Login = () => {
                     <h2 className="contentName">Log In</h2>
                     <div className="login-list">
                         <div className="inputLine">
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">Email or phone number</label>
                             <input
-                            type="email" 
+                            type="text" 
                             id="email" 
-                            placeholder="Enter your email" 
+                            placeholder="Enter your email or phone number" 
                             />
                         </div>
                         <div className="inputLine">

@@ -86,20 +86,28 @@
         border-radius: 8px;
     }
 
-    .verifyBtn {
+    .verifyBtnactive {
         width: 164px;
         height: 48px;
-        color: #1B2530;
         font-size: 16px;
         font-style: normal;
         font-weight: 590;
         line-height: 24px;
-    }
-
-    .verifyBtn {
         background-color: #226CE0;
         border-radius: 8px;
         color: #FFF;
+    }
+    .verifyBtnfaded {
+        width: 164px;
+        height: 48px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 590;
+        line-height: 24px;
+        background-color: #226CE0;
+        border-radius: 8px;
+        color: #FFF;
+        opacity: 0.4;
     }
 }
 

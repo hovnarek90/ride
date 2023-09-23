@@ -28,7 +28,7 @@ const Verification = () => {
   const handleVerify = (e) => {
     e.preventDefault();
     if (verification()) {
-      navigate("/user");
+      navigate("/home");
     }
   };
   const verification = () => {
@@ -143,11 +143,7 @@ const Verification = () => {
               className="verifyBackBtn"
               onClick={handleBack}
             />
-            <Button
-              text="Verify"
-              className="verifyBtn"
-              onClick={handleVerify}
-            />
+            <button disabled={!verification()} onClick={handleVerify} className={`verifyBtn${verification() ? "active" : "faded"}`}>Verify</button>
           </div>
         </div>
       </div>

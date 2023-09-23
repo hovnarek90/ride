@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFlag,
@@ -11,6 +11,16 @@ import "./main-form.css";
 import DatePickerComponent from "./calendar/DatePickerComponent.jsx";
 
 export default function MainForm() {
+  const [fromValue, setFromValue] = useState("");
+  const [toValue, setToValue] = useState("");
+
+  const swapFromAndTo = (e) => {
+    e.preventDefault();
+    const temp = fromValue;
+    setFromValue(toValue);
+    setToValue(temp);
+  };
+
   return (
     <>
       <form action="">
@@ -18,10 +28,15 @@ export default function MainForm() {
           <span className="icon">
             <FontAwesomeIcon icon={faLocationDot} />
           </span>
-          <input type="text" placeholder="From" />
+          <input 
+            type="text"
+            placeholder="From"
+            value={fromValue}
+            onChange={(e) => setFromValue(e.target.value)} 
+          />
         </div>
         <div className="button-repeat">
-          <button type="submit">
+          <button type="submit" onClick={swapFromAndTo}>
             <FontAwesomeIcon icon={faRepeat} />
           </button>
         </div>
@@ -29,7 +44,12 @@ export default function MainForm() {
           <span className="icon">
             <FontAwesomeIcon icon={faFlag} />
           </span>
-          <input type="text" placeholder="To" />
+          <input
+            type="text"
+            placeholder="To"
+            value={toValue}
+            onChange={(e) => setToValue(e.target.value)}
+          />
         </div>
 
         <div className="data">
@@ -47,7 +67,7 @@ export default function MainForm() {
           </div>
         </div>
         <div className="offer-buttons">
-          <Button type="green"> Offer a ride</Button>
+          {/* <Button type="green"> Offer a ride</Button> */}
           <Button type="blue"> Finde a ride</Button>
         </div>
       </form>
