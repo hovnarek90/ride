@@ -32,7 +32,7 @@ export default function App({}) {
     >
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route
