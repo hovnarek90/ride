@@ -3,26 +3,28 @@ import "./registration-form.css";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 import { useNavigate } from "react-router-dom";
-import usersData from "./user.json";
+import axios from "axios";
 
 const Registration = ({ data, handleChange }) => {
   const [visible, setVisible] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
     if (validation()) {
-      const newUser = {
-        id: usersData.users.length + 1,
-        fullName: data.fullName,
-        password: data.phone,
-        phone: data.phone,
-      };
-      console.log(usersData);
-      usersData.users.push(newUser);
-      navigate("/verify", { state: { phoneNumber: data.phone } });
-      console.log(usersData);
+      try {
+        const response = await axios.post(`${import.meta.env.VITE_APP_API}/register`, data).then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+        console.log(response.data);
+        navigate("/verify", { state: { phoneNumber: data.phone } });
+      } catch (error) {
+        console.log("Registration failed:", error);
+      }
     }
   };
 

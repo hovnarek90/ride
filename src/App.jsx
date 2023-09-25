@@ -5,11 +5,11 @@ import "./App.css";
 import Header from "./components/header/header";
 import Registration from "./components/loginform/components/registr/RegistrationForm";
 import Verification from "./components/loginform/components/verify/Verify";
-import Login from "./components/loginform/components/login/LoginForm";
+import Login from "./login/LoginForm";
 import MyAccount from "./components/loginform/components/user/User";
 import { useState } from "react";
 
-export default function App({}) {
+export default function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({
     fullName: "",
@@ -36,7 +36,7 @@ export default function App({}) {
         <Route path="about" element={<About />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route
-          path="reg"
+          path="register"
           element={<Registration data={data} handleChange={handleChange} />}
         />
         <Route path="verify" element={<Verification />} />
