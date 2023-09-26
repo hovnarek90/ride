@@ -4,24 +4,33 @@ import path from "path";
 import fs from "fs";
 
 const app = express();
-const port = 3008;
+const port = 3008; 
 
-const userJsonPath = path.join("src", "user.json");
+const userJsonPath = path.join(process.cwd(), "user.json");
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
 app.post("/register", (req, res) => {
   const userData = req.body;
-
   const existingData = fs.readFileSync(userJsonPath, "utf-8");
   const users = JSON.parse(existingData);
 
   users.push(userData);
 
   fs.writeFileSync(userJsonPath, JSON.stringify(users, null, 2), "utf-8");
-
   res.json({ message: "Registration successful!", user: userData });
+});
+
+app.get("/users", (req, res) => {
+  try {
+    const existingData = fs.readFileSync(userJsonPath, "utf-8");
+    const users = JSON.parse(existingData);
+    res.json(users);
+  } catch (error) {
+    console.error("Error reading user data:", error);
+    res.status(500).json({ error: "Failed to retrieve user data" });
+  }
 });
 
 app.listen(port, () => {
