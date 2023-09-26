@@ -5,7 +5,7 @@ import "./App.css";
 import Header from "./components/header/header";
 import Registration from "./components/loginform/components/registr/RegistrationForm";
 import Verification from "./components/loginform/components/verify/Verify";
-import Login from "./login/LoginForm";
+import Login from "./components/loginform/components/login/LoginForm";
 import MyAccount from "./components/loginform/components/user/User";
 import { useState } from "react";
 

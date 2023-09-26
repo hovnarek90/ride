@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./login-form.css";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
-import Button from "../components/buttons/Button";
+import Button from "../../../buttons/registrationButtons/RegistrButton";
 
 const Login = () => {
     const [ visible, setVisible ] = useState(false);

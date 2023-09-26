@@ -14,12 +14,13 @@ const Registration = ({ data, handleChange }) => {
     if (validation()) {
       try {
         const response = await fetch("/register", data).then(function (response) {
-          console.log(response);
+          return response;
         })
         .catch(function (error) {
           console.log(error);
         });
-        console.log(response.data);
+        console.log(response);
+        console.log(data);
         navigate("/verify", { state: { phoneNumber: data.phone } });
       } catch (error) {
         console.log("Registration failed:", error);
