@@ -17,7 +17,7 @@ const Verification = () => {
   });
 
   const handleBack = () => {
-    navigate("/reg");
+    navigate("/register");
   };
 
   const handleVerifyChanges = (e) => {
