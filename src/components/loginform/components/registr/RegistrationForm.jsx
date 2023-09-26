@@ -3,7 +3,6 @@ import "./registration-form.css";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 const Registration = ({ data, handleChange }) => {
   const [visible, setVisible] = useState(false);
@@ -14,7 +13,7 @@ const Registration = ({ data, handleChange }) => {
     e.preventDefault();
     if (validation()) {
       try {
-        const response = await axios.post(`${import.meta.env.VITE_APP_API}/register`, data).then(function (response) {
+        const response = await fetch("/register", data).then(function (response) {
           console.log(response);
         })
         .catch(function (error) {
