@@ -1,11 +1,14 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "fullName": "Full Name",
-        "password": "password",
-        "phone": "+374XXXXXX"
-      }
-    ]
+  "users": [
+    {
+      "fullName": "Full Name",
+      "password": "password",
+      "phone": "+374XXXXXX"
+    },
+    {
+      "fullName": "Name Surname",
+      "password": "123456@Picsart",
+      "phone": "+37493124578"
+    }
+  ]
 }
-  
