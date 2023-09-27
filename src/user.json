@@ -1,14 +1,16 @@
 {
   "users": [
     {
-      "fullName": "Full Name",
-      "password": "password",
-      "phone": "+374XXXXXX"
+      "fullName": "Name Surname",
+      "password": "123456@Picsart",
+      "phone": "+37493124578",
+      "id": "01f1968e-c93c-41f1-99ed-1e26c39a981b"
     },
     {
       "fullName": "Name Surname",
       "password": "123456@Picsart",
-      "phone": "+37493124578"
+      "phone": "+37493124578",
+      "id": "9e1bb454-9177-4305-a54d-0e3c496db71f"
     }
   ]
 }

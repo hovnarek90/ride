@@ -29,6 +29,9 @@ function HamburgerMenu({ isOpen, setIsOpen }) {
               <Link to="/dashboard">Dashboard</Link>
             </li>
             <li>
+              <Link to="register">Registration</Link>
+            </li>
+            <li>
               <Link to="/nothing-here">Nothing Here</Link>
             </li>
           </ul>

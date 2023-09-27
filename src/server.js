@@ -3,12 +3,12 @@ import bodyParser from "body-parser";
 import path from "path";
 import fs from "fs";
 import cors from "cors";
+import { v4 as uuidv4 } from "uuid";
 
 const app = express();
 const port = 3008; 
 
 const userJsonPath = path.join(process.cwd(), "user.json");
-let users = [];
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -19,6 +19,8 @@ app.post("/register", (req, res) => {
     const userData = req.body;
     const existingData = fs.readFileSync(userJsonPath, "utf-8");
     const users = JSON.parse(existingData);
+
+    userData.id = uuidv4();
     users.users.push(userData);
     
     fs.writeFileSync(userJsonPath, JSON.stringify(users, null, 2), "utf-8");
