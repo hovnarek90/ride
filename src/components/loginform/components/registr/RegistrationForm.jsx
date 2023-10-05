@@ -4,7 +4,7 @@ import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 import Button from "../../../buttons/registrationButtons/RegistrButton";
 import { useNavigate } from "react-router-dom";
 
-const Registration = ({ data, handleChange }) => {
+const Registration = ({ data, handleChange, handleClean }) => {
   const [visible, setVisible] = useState(false);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
@@ -20,11 +20,14 @@ const Registration = ({ data, handleChange }) => {
           },
           body: JSON.stringify(data),
         });
-  
+
         if (response.ok) {
           const responseData = await response.json();
           console.log(responseData);
-          navigate("/verify", { state: { phoneNumber: data.phone } });
+
+          navigate("/verify", { state: { phoneNumber: data.phone, token: responseData.user.token } });
+
+          handleClean();
         } else {
           console.log("Registration failed:", response.statusText);
         }

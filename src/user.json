@@ -1,16 +1,53 @@
 {
   "users": [
     {
-      "fullName": "Name Surname",
-      "password": "123456@Picsart",
-      "phone": "+37493124578",
-      "id": "01f1968e-c93c-41f1-99ed-1e26c39a981b"
+      "fullName": "Hovik Harutyunyan",
+      "password": "123456@Parol",
+      "phone": "+37495151515",
+      "id": "c992b802-99d0-4b92-8893-ebd79249976b",
+      "status": "Active"
     },
     {
-      "fullName": "Name Surname",
-      "password": "123456@Picsart",
-      "phone": "+37493124578",
-      "id": "9e1bb454-9177-4305-a54d-0e3c496db71f"
+      "fullName": "Gevorg Gevorgyan",
+      "password": "123456@Hello",
+      "phone": "+37493112233",
+      "id": "a5c944f0-4190-4b31-968c-c5ac7ec445f0",
+      "status": "Passive"
+    },
+    {
+      "fullName": "John Snow",
+      "password": "789789#Byebye",
+      "phone": "+37455332211",
+      "id": "1b6b56e0-4115-41ad-81de-954302949e9f",
+      "status": "Active"
+    },
+    {
+      "fullName": "Aram Aramyan",
+      "password": "456654@Aram",
+      "phone": "+37498453198",
+      "id": "83a30573-8f03-4995-bbea-ea177934dad1",
+      "status": "Active"
+    },
+    {
+      "fullName": "Narek Narekyan",
+      "password": "123456@Narek",
+      "phone": "+37410203050",
+      "id": "cb9fb7f4-840d-420e-9e98-7ddb00e1b62e",
+      "status": "Passive"
+    },
+    {
+      "fullName": "Artur Arturyan",
+      "password": "123456@Artur",
+      "phone": "+37494102060",
+      "id": "a5b0b0f1-67c8-41d1-8257-0074e633b894",
+      "status": "Active"
+    },
+    {
+      "fullName": "Mariam Melqonyan",
+      "password": "123456@Mariam",
+      "phone": "+37498122334",
+      "id": "eaf220e9-6402-4b0f-be21-8e47310d647d",
+      "status": "Active"
     }
   ]
 }

@@ -22,6 +22,14 @@ export default function App() {
     setData({ ...data, [name]: value });
   };
 
+  const handleClean = () => {
+    setData({
+      fullName: "",
+      password: "",
+      phone: ""
+    })
+  }
+
   return (
     <div
       onClick={() => {
@@ -37,7 +45,7 @@ export default function App() {
         <Route path="dashboard" element={<Dashboard />} />
         <Route
           path="register"
-          element={<Registration data={data} handleChange={handleChange} />}
+          element={<Registration data={data} handleChange={handleChange} handleClean={handleClean} />}
         />
         <Route path="verify" element={<Verification />} />
         <Route path="login" element={<Login />} />
